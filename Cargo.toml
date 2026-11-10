@@ -4,11 +4,11 @@ version = "7.0.0"
 edition = "2021"
 authors = ["Mr. Harith"]
 description = "Hydra-Sploit: Full Offensive Stack with Metasploit Integration"
-license = "NONE"
-repository = "http://darkweb.git/hydra-sploit.git"
+license = "MIT license"
+repository = "https://github.com/HarithBUGbounty/Hydra-Sploit.git"
 
 [dependencies]
-reqwest = { version = "0.11", features = ["blocking"] }
+reqwest = { version = "0.13.4", features = ["blocking"] }
 tokio = { version = "1", features = ["full"] }
 urlencoding = "2.1.0"
 serde = { version = "1.0", optional = true }
