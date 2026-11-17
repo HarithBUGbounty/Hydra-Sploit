@@ -12,3 +12,5 @@ A Python-based cybersecurity toolkit built for pentest, security research, and a
 - ./Hydra-Sploit.py
 # Supported Platform
 - Kali linux
+
+![Hydra-Theme](https://github.com/HarithBUGbounty/Hydra-Sploit/Hydra-Theme/blob/main/check.png?raw=true)
