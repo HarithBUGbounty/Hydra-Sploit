@@ -22,7 +22,7 @@ def get_lhost():
         return "127.0.0.1"
 
 def start_dos():
-    print("\n HYDRA-DOOM FLOOD INITIATED — MB-SIZED PACKET BLAST")
+    print("\n[+] Initializing Hydra-DoS MODE")
     target = input("Enter target IP or domain: ").strip()
     port = input("Enter port (e.g., 80): ").strip() or "80"
     mb_size = input("Enter packet size in MB: ").strip() or "50"
@@ -102,7 +102,7 @@ def start_c2():
         else:
             print("[-] Target not vulnerable.")
     except Exception as e:
-        print(f"[-] Exploit failed: {str(e)}")
+        print(f" [-] Exploit failed: {str(e)}")
 
 def spawn_listener(lhost, lport):
     try:
@@ -119,7 +119,7 @@ def launch_msfconsole():
     os.system("msfconsole")
 
 def build_meterpreter():
-    print("\n[+] DYNAMIC METERPRETER PAYLOAD GENERATOR")
+    print("\n[$] DYNAMIC METERPRETER PAYLOAD GENERATOR")
     lhost = input(f" LHOST (Your IP) [{get_lhost()}]: ").strip() or get_lhost()
     lport = input(" LPORT (e.g., 4444): ").strip() or "4444"
 
@@ -154,7 +154,7 @@ def build_meterpreter():
         print(f" Payload generated: {filename}")
         print(f" Install to Metasploit: cp {filename} ~/.msf4/modules/exploits/")
     except subprocess.CalledProcessError:
-        print("msfvenom failed. Is your metasploit installed yet?")
+        print(GOLD + "[-] msfvenom failed. Is your metasploit installed yet?" + RESET)
     except Exception as e:
         print(f" Error: {str(e)}")
 
@@ -163,22 +163,28 @@ def main():
     GREEN = "\033[92m"
     CYAN = "\033[96m"
     BLUE = "\033[94m"
-    RED = "\033[91"
+    RED = "\033[91m"
+    PURPLE = "\033[95m"
+    DARK_RED = "\033[31m"
+    GOLD = "\033[33m"
     RESET = "\033[0m"
 
-    print(GREEN + "</> HYDRA - SPLOIT FRAMEWORK V2.61 </>" + RESET)
-    print(CYAN + "By: harithDev (@HarithBUGbounty)" + RESET)
+    print(GREEN + "</> HYDRA - SPLOIT FRAMEWORK (HRsploit) </>" + RESET)
+    print(CYAN + "Created by: harithDev (@HarithBUGbounty)" + RESET)
+    print(PURPLE + "Support my YT: https://youtube.com/@harithCTF")
+    print(PURPLE + "Follow me on IG: @harithdev830")
+    print(RED + "Version: 2.6" + RESET)
 
     while True:
 
-        print(CYAN + "\n ⚠ DISCLAIMER: Authorized offensive testing only. Im not responsible for you stupid actions. ⚠" + RESET)
-        print(BLUE + "[1] MB-Scale Denial-of-Service Flood (DoS)" + RESET)
-        print(BLUE + "[2] Auto-Exploit C2 Engine (RCE + Reverse Shell)" + RESET)
-        print(BLUE + "[3] Launch Msfconsole (Metasploit Framework)" + RESET)
-        print(BLUE + "[4] Build Dynamic Meterpreter (.so /.dll)" + RESET)
-        print(RED + "[0] Exit Hydra-Sploit" + RESET)
+        print(GOLD + "\n⚠ DISCLAIMER: Authorized offensive testing only. Im not responsible for you stupid actions⚠" + RESET)
+        print(BLUE + "[1]. MB-Scale Denial-of-Service Flood (DoS)" + RESET)
+        print(BLUE + "[2]. Auto-Exploit C2 Engine (RCE + Reverse Shell)" + RESET)
+        print(BLUE + "[3]. Launch Msfconsole (Metasploit Framework)" + RESET)
+        print(BLUE + "[4]. Build Dynamic Meterpreter (.so /.dll)" + RESET)
+        print(BLUE + "[0]. Exit the Hydra-Sploit" + RESET)
 
-        choice = input("\n Enter choice: ").strip()
+        choice = input(f"\n{RED}┌─[{RED}root{RESET}{RED}@Hydra-Sploit{RED}]─[{RED}~{RED}]\n└──╼ {DARK_RED}#{RESET}").strip()
 
         if choice == "1":
             start_dos()
@@ -192,7 +198,7 @@ def main():
             print("Exiting Hydra-Sploit...")
             sys.exit(0)
         else:
-            print("Invalid option. Choose between 1-4")
+            print(RED + "Invalid option. Choose between 1-4" + RESET)
 
 if __name__ == "__main__":
     try:
