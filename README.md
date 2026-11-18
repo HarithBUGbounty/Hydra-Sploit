@@ -1,6 +1,6 @@
 # Hydra-Sploit 2.6 
 A Python-based cybersecurity toolkit with Post exploitation, Denial-Of-Service, Autonomous reverse shell of netcat.
-So this tool only used for authorized penetration testing only or you have explicit permission from owner if you want do hacking to their server. I'm not responsible if you using this for blackhat unethical purpose and also be Good Boyz&Girlz
+So this tool only used for authorized penetration testing only or you have explicit permission from owner if you want do hacking to their server. I'm not responsible if you using this for blackhat unethical purpose and make sure also be Good Boyz&Girlz 🫵🏽
 # Requirements 🌵
 - Python 3
 - Kali Linux (Kali linux recommended)
